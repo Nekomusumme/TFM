@@ -1,10 +1,11 @@
-library(readr)
-EES_2018 <- read_delim("C:/Users/Janire/Desktop/TFM/ESS INE/CSV/EES_2018.csv", 
-                       delim = "\t", escape_double = FALSE, trim_ws = TRUE)
+#MODELO REGRESION LOGISTICA#
 
+#LIBRERIAS UTILIZADAS
+
+library(readr)
 library(dplyr)
 library(tidyr)
-library(tseries) #Carga los comandos para las pruebas de normalidad
+library(tseries)
 library(car)
 library(DescTools)
 library(ggplot2)
@@ -19,6 +20,9 @@ library(tidyverse)
 library(ISLR)
 library(vcd)
 
+
+EES_2018 <- read_delim("CSV/EES_2018.csv", #Ruta del archivo
+                       delim = "\t", escape_double = FALSE, trim_ws = TRUE)
 
 dg = EES_2018 %>% select(ORDENTRA, SALBASE, JSP1, SEXO, ANOS2, TIPOPAIS, ESTU, ANOANTI, TIPOJOR, TIPOCON, CNO1, CNACE, NUTS1, FACTOTAL)
 names (dg)
