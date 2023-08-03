@@ -1,11 +1,10 @@
-#Tabla ANOVA
+#ANOVA DE WELCH#
+
+#Librerias utilizadas
 
 library(readr)
-EES_2018 <- read_delim("C:/Users/Janire/Desktop/TFM/ESS INE/CSV/EES_2018.csv", 
-                       delim = "\t", escape_double = FALSE, trim_ws = TRUE)
-
 library(dplyr)
-library(tseries) #Carga los comandos para las pruebas de normalidad
+library(tseries) 
 library(car)
 library(DescTools)
 library(ggplot2)
@@ -16,6 +15,8 @@ library(rstatix)
 library(cowplot)
 library(ggstatsplot)
 
+EES_2018 <- read_delim("E/CSV/EES_2018.csv", #Ruta del archivo
+                       delim = "\t", escape_double = FALSE, trim_ws = TRUE)
 
 df = EES_2018 %>% select(ORDENTRA, SALBASE, JSP1, SEXO, ANOS2, TIPOPAIS, ESTU, ANOANTI, TIPOJOR, TIPOCON, CNO1, CNACE, NUTS1, FACTOTAL)
 names (df)
