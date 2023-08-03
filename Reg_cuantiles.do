@@ -1,3 +1,5 @@
+*MODELO REGRESION CUANTILICA
+
 *La base de datos procede de la carpeta de STATA, procedente del EES
 * La ruta es la siguiente: ESS INE\STATA\EES_2018.dta
 help qplot
